@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify, render_template
-import os
+from flask import Flask, request, render_template
+from waitress import serve
 from static.PY.Product_scrapper import Scrapper
 
 app = Flask(__name__)
@@ -25,5 +25,4 @@ def exe_scrappeo():
     return render_template('scrapped_page.html',name=name,price=price,images=images,description=description)
 
 if __name__ == '__main__':
-    print("STARTING THE SERVER...")
-    app.run()
+    serve (app, host='https://dockerdeploy-0tme.onrender.com',port=10000)
