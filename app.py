@@ -25,4 +25,4 @@ def exe_scrappeo():
     return render_template('scrapped_page.html',name=name,price=price,images=images,description=description)
 
 if __name__ == '__main__':
-    serve(app, server='https://dockerdeploy-0tme.onrender.com')
+    serve(app)
