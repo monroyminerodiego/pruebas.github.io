@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+
+{% block subtitulo %}
+<h3>Enter the URL to review</h3>
+{% endblock %}
+
+{% block body %}
+<form action="/Scrapping" method="post">
+    <!-- <label for="url">Enter URL:</label> -->
+    <input type="text" id="url" name="url">
+    <button type="submit">Process URL</button>
+</form>
+{% endblock %}

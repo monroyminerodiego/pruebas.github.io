@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+
+{% block subtitulo %}
+<h3>Data of the url</h3>
+{% endblock %}
+
+{% block body %}
+<p> The name of the URL is: {{ name }} </p>
+<p> The price of the URL is: {{ price }} </p>
+<p> The description of the URL is: {{ description }} </p>
+{% for image in images %}
+    <img src="{{ image }}" alt="watata" height="150" width="150">
+{% endfor %}
+{% endblock %}
